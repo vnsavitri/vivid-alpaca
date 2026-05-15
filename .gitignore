@@ -1,0 +1,14 @@
+.DS_Store
+.env
+.env.*
+__pycache__/
+*.py[cod]
+*.log
+*.csv
+data/
+eval_results/
+sessions/
+memory.md
+ai-trade-recommendations/
+ref-alpaca/
+ref-from-vivid/
