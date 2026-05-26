@@ -16,7 +16,7 @@
 ## Architecture Snapshot
 
 <p align="center">
-  <img src="assets/schema.png" style="width: 100%; height: auto;">
+  <img src="assets/vivid-alpaca-architecture-v3.svg" style="width: 100%; height: auto;">
 </p>
 
 ## UI Direction
