@@ -1,0 +1,231 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1240" viewBox="0 0 2400 1240" role="img" aria-labelledby="title desc">
+  <title id="title">Vivid Alpaca System Schema</title>
+  <desc id="desc">Left-to-right schema for Vivid Alpaca showing inputs, analyst agents, debate, trader proposal, risk policy, execution guard, broker execution, and evaluation.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111416"/>
+      <stop offset="0.6" stop-color="#17191c"/>
+      <stop offset="1" stop-color="#0c1013"/>
+    </linearGradient>
+    <filter id="shadow" x="-18%" y="-18%" width="136%" height="145%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#000" flood-opacity=".36"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M0 1 L10 6 L0 11 Z" fill="#c6ccd2"/>
+    </marker>
+    <marker id="arrowGold" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="10" markerHeight="10" orient="auto">
+      <path d="M0 1 L10 6 L0 11 Z" fill="#e2ad43"/>
+    </marker>
+    <style>
+      .title { font-family: sans-serif; font-size: 46px; font-weight: 800; fill: #f4f4ef; }
+      .sub { font-family: sans-serif; font-size: 18px; font-weight: 600; fill: #aab3bb; }
+      .section { font-family: sans-serif; font-size: 13px; font-weight: 800; fill: #d9dde0; letter-spacing: .08em; }
+      .boxTitle { font-family: sans-serif; font-size: 20px; font-weight: 800; fill: #eef2ee; }
+      .text { font-family: sans-serif; font-size: 16px; font-weight: 650; fill: #cbd2d8; }
+      .small { font-family: sans-serif; font-size: 13px; font-weight: 750; fill: #b7c0c8; }
+      .mono { font-family: monospace; font-size: 13px; font-weight: 750; fill: #f3cc75; }
+      .panel { fill-opacity: .34; stroke-width: 2.5; }
+      .chip { stroke: #b9c0c7; stroke-opacity: .68; stroke-width: 2; }
+      .line { fill: none; stroke: #c6ccd2; stroke-width: 3; marker-end: url(#arrow); }
+      .lineNoArrow { fill: none; stroke: #c6ccd2; stroke-width: 3; }
+      .lineGold { fill: none; stroke: #e2ad43; stroke-width: 3.5; marker-end: url(#arrowGold); }
+      .return { fill: none; stroke: #8b97a3; stroke-width: 2.5; stroke-dasharray: 10 10; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="2400" height="1240" fill="url(#bg)"/>
+  <path d="M0 210 H2400 M0 420 H2400 M0 630 H2400 M0 840 H2400 M0 1050 H2400 M240 0 V1240 M480 0 V1240 M720 0 V1240 M960 0 V1240 M1200 0 V1240 M1440 0 V1240 M1680 0 V1240 M1920 0 V1240 M2160 0 V1240" stroke="#293138" stroke-width="1" opacity=".25"/>
+
+  <g transform="translate(70 56)">
+    <text class="title" x="0" y="0">Vivid Alpaca System Schema</text>
+    <text class="sub" x="0" y="42">Agent reasoning stays separate from policy, guardrails, and broker execution</text>
+  </g>
+
+  <!-- Left inputs and analysts -->
+  <g filter="url(#shadow)">
+    <g transform="translate(70 155)">
+      <rect width="410" height="150" rx="18" fill="#10252d" stroke="#2d78a8" class="panel"/>
+      <text class="section" x="26" y="34">MARKET ANALYST</text>
+      <rect x="30" y="68" width="150" height="56" rx="9" fill="#2d73c8" class="chip"/>
+      <text class="text" x="57" y="103">Alpaca API</text>
+      <rect x="210" y="68" width="150" height="56" rx="9" fill="#2d73c8" class="chip"/>
+      <text class="text" x="240" y="103">Stockstats</text>
+    </g>
+
+    <g transform="translate(70 345)">
+      <rect width="650" height="150" rx="18" fill="#2b2414" stroke="#8e6518" class="panel"/>
+      <text class="section" x="26" y="34">NEWS ANALYST</text>
+      <rect x="30" y="68" width="132" height="56" rx="9" fill="#62676a" class="chip"/>
+      <text class="text" x="61" y="103">Google</text>
+      <rect x="184" y="68" width="132" height="56" rx="9" fill="#2d73c8" class="chip"/>
+      <text class="text" x="210" y="103">Finnhub</text>
+      <rect x="338" y="68" width="132" height="56" rx="9" fill="#2bb99e" class="chip"/>
+      <text class="text" x="362" y="96">Coindesk</text>
+      <text class="small" x="374" y="116">crypto</text>
+      <rect x="492" y="68" width="132" height="56" rx="9" fill="#62676a" class="chip"/>
+      <text class="text" x="520" y="96">OpenAI</text>
+      <text class="small" x="512" y="116">websearch</text>
+    </g>
+
+    <g transform="translate(350 535)">
+      <rect width="370" height="140" rx="18" fill="#2b2414" stroke="#8e6518" class="panel"/>
+      <text class="section" x="26" y="34">SOCIAL ANALYST</text>
+      <rect x="30" y="68" width="140" height="52" rx="9" fill="#62676a" class="chip"/>
+      <text class="text" x="72" y="101">Reddit</text>
+      <rect x="202" y="68" width="140" height="52" rx="9" fill="#62676a" class="chip"/>
+      <text class="text" x="232" y="95">OpenAI</text>
+      <text class="small" x="224" y="113">websearch</text>
+    </g>
+
+    <g transform="translate(70 715)">
+      <rect width="650" height="150" rx="18" fill="#2b2414" stroke="#8e6518" class="panel"/>
+      <text class="section" x="26" y="34">FUNDAMENTALS ANALYST</text>
+      <rect x="30" y="68" width="132" height="56" rx="9" fill="#2d73c8" class="chip"/>
+      <text class="text" x="56" y="103">Finnhub</text>
+      <rect x="184" y="68" width="132" height="56" rx="9" fill="#2d73c8" class="chip"/>
+      <text class="text" x="214" y="103">SimFin</text>
+      <rect x="338" y="68" width="132" height="56" rx="9" fill="#2bb99e" class="chip"/>
+      <text class="text" x="361" y="96">Defi Llama</text>
+      <text class="small" x="375" y="116">crypto</text>
+      <rect x="492" y="68" width="132" height="56" rx="9" fill="#62676a" class="chip"/>
+      <text class="text" x="520" y="96">OpenAI</text>
+      <text class="small" x="512" y="116">websearch</text>
+    </g>
+
+    <g transform="translate(500 905)">
+      <rect width="220" height="130" rx="18" fill="#2b2414" stroke="#8e6518" class="panel"/>
+      <text class="section" x="24" y="34">MACRO ANALYST</text>
+      <rect x="42" y="68" width="136" height="46" rx="9" fill="#62676a" class="chip"/>
+      <text class="text" x="77" y="98">FRED API</text>
+    </g>
+
+    <g transform="translate(70 945)">
+      <rect width="350" height="130" rx="18" fill="#10252d" stroke="#2d78a8" class="panel"/>
+      <text class="section" x="24" y="34">BROKER STATE</text>
+      <rect x="26" y="65" width="132" height="44" rx="8" fill="#2a6b86" class="chip"/>
+      <text class="small" x="59" y="92">positions</text>
+      <rect x="184" y="65" width="132" height="44" rx="8" fill="#2a6b86" class="chip"/>
+      <text class="small" x="222" y="92">orders</text>
+    </g>
+  </g>
+
+  <!-- Clean left-to-right connector bus -->
+  <path class="lineNoArrow" d="M480 230 H760"/>
+  <path class="lineNoArrow" d="M720 420 H760"/>
+  <path class="lineNoArrow" d="M720 605 H760"/>
+  <path class="lineNoArrow" d="M720 790 H760"/>
+  <path class="lineNoArrow" d="M720 970 H760"/>
+  <path class="lineNoArrow" d="M420 1010 V1105 H760"/>
+  <path class="lineNoArrow" d="M760 230 V1105"/>
+  <path class="line" d="M760 565 H865"/>
+  <path class="line" d="M760 605 H865"/>
+  <path class="line" d="M760 645 H865"/>
+
+  <!-- Researcher debate -->
+  <g filter="url(#shadow)" transform="translate(865 270)">
+    <rect width="270" height="520" rx="20" fill="#2f2a18" stroke="#bd8420" class="panel"/>
+    <text class="section" x="26" y="38">RESEARCHER TEAM</text>
+    <rect x="55" y="90" width="160" height="72" rx="10" fill="#2e6b3e" class="chip"/>
+    <text class="text" x="101" y="133">Bullish</text>
+    <rect x="55" y="354" width="160" height="72" rx="10" fill="#733436" class="chip"/>
+    <text class="text" x="99" y="397">Bearish</text>
+    <rect x="45" y="214" width="180" height="88" rx="44" fill="#1b1d21" stroke="#aeb5bc" stroke-width="2.5"/>
+    <text class="text" x="88" y="268">Discussion</text>
+    <path class="line" d="M135 164 V206"/>
+    <path class="line" d="M135 352 V312"/>
+    <path class="return" d="M107 306 V348"/>
+    <path class="return" d="M163 210 V170"/>
+  </g>
+
+  <!-- Trader and policy -->
+  <path class="line" d="M1135 530 C1195 530 1215 520 1265 520"/>
+  <path class="line" d="M1135 665 C1200 665 1218 610 1265 595"/>
+
+  <g filter="url(#shadow)" transform="translate(1220 160)">
+    <rect width="350" height="205" rx="20" fill="#382b18" stroke="#bd8420" class="panel"/>
+    <text class="section" x="26" y="36">UI POLICY CONTROLS</text>
+    <rect x="30" y="68" width="140" height="46" rx="8" fill="#6b5226" class="chip"/>
+    <text class="small" x="62" y="96">risk profile</text>
+    <rect x="190" y="68" width="130" height="46" rx="8" fill="#6b5226" class="chip"/>
+    <text class="small" x="218" y="96">goal overlay</text>
+    <rect x="30" y="130" width="140" height="46" rx="8" fill="#59441f" class="chip"/>
+    <text class="small" x="56" y="158">watchlists</text>
+    <rect x="190" y="130" width="130" height="46" rx="8" fill="#59441f" class="chip"/>
+    <text class="small" x="217" y="158">risk mode</text>
+  </g>
+
+  <g filter="url(#shadow)" transform="translate(1265 500)">
+    <rect width="170" height="110" rx="12" fill="#252b85" stroke="#aab2d8" stroke-width="2.5"/>
+    <text class="section" x="45" y="34">TRADER</text>
+    <text class="text" x="43" y="70">proposal</text>
+    <text class="small" x="34" y="94">BUY / HOLD / SELL</text>
+  </g>
+  <path class="lineGold" d="M1395 365 V492"/>
+
+  <!-- Risk manager -->
+  <path class="line" d="M1435 555 H1570"/>
+  <g filter="url(#shadow)" transform="translate(1570 390)">
+    <rect width="290" height="286" rx="20" fill="#162332" stroke="#2f72b0" class="panel"/>
+    <text class="section" x="26" y="36">RISK MANAGER</text>
+    <rect x="36" y="72" width="210" height="54" rx="9" fill="#704829" class="chip"/>
+    <text class="text" x="76" y="106">Balanced growth</text>
+    <rect x="36" y="142" width="210" height="54" rx="9" fill="#686c6f" class="chip"/>
+    <text class="text" x="62" y="176">Capital preservation</text>
+    <rect x="36" y="212" width="210" height="54" rx="9" fill="#288da8" class="chip"/>
+    <text class="text" x="60" y="246">Aggressive training</text>
+  </g>
+
+  <!-- Execution path -->
+  <path class="line" d="M1860 522 H1940"/>
+  <g filter="url(#shadow)" transform="translate(1940 475)">
+    <rect width="145" height="90" rx="11" fill="#2d61a7" stroke="#b8c2d6" stroke-width="2.5"/>
+    <text class="section" x="40" y="34">MANAGER</text>
+    <text class="small" x="43" y="62">decision</text>
+  </g>
+
+  <path class="lineGold" d="M2085 520 H2145"/>
+  <g filter="url(#shadow)" transform="translate(2145 430)">
+    <rect width="210" height="180" rx="18" fill="#3f2321" stroke="#bf604d" class="panel"/>
+    <text class="section" x="23" y="36">EXECUTION GUARD</text>
+    <rect x="24" y="66" width="76" height="40" rx="8" fill="#76443e" class="chip"/>
+    <text class="small" x="43" y="91">size</text>
+    <rect x="114" y="66" width="72" height="40" rx="8" fill="#76443e" class="chip"/>
+    <text class="small" x="132" y="91">caps</text>
+    <rect x="24" y="118" width="76" height="40" rx="8" fill="#67403b" class="chip"/>
+    <text class="small" x="45" y="143">cash</text>
+    <rect x="114" y="118" width="72" height="40" rx="8" fill="#67403b" class="chip"/>
+    <text class="small" x="126" y="143">gates</text>
+    <text class="mono" x="24" y="173">guarded order</text>
+  </g>
+
+  <g filter="url(#shadow)" transform="translate(2215 705)">
+    <rect width="150" height="116" rx="13" fill="#272b8b" stroke="#b9bee0" stroke-width="2.5"/>
+    <text class="section" x="35" y="35">BROKER</text>
+    <text class="boxTitle" x="40" y="70">Order</text>
+    <text class="boxTitle" x="25" y="96">Execution</text>
+  </g>
+  <path class="lineGold" d="M2250 610 V698"/>
+
+  <!-- Evaluation loop routed below, outside the execution boxes -->
+  <g filter="url(#shadow)" transform="translate(890 890)">
+    <rect width="880" height="180" rx="20" fill="#231c37" stroke="#785ab0" class="panel"/>
+    <text class="section" x="28" y="40">EVALUATION LOOP</text>
+    <text class="boxTitle" x="28" y="82">Reports, debates, guard outcomes, portfolio behaviour</text>
+    <text class="text" x="28" y="120">Agent decisions are compared with guard outcomes and broker state so the system can be audited.</text>
+    <rect x="28" y="142" width="160" height="28" rx="7" fill="#463462" class="chip"/>
+    <text class="small" x="56" y="161">session notes</text>
+    <rect x="210" y="142" width="160" height="28" rx="7" fill="#463462" class="chip"/>
+    <text class="small" x="246" y="161">trade journal</text>
+    <rect x="392" y="142" width="160" height="28" rx="7" fill="#463462" class="chip"/>
+    <text class="small" x="431" y="161">replay path</text>
+  </g>
+  <path class="return" d="M2290 821 V1015 H1778"/>
+  <path class="return" d="M1338 890 V620"/>
+  <path class="return" d="M1055 890 V800"/>
+
+  <g transform="translate(70 1145)">
+    <rect width="2260" height="55" rx="16" fill="#11181d" stroke="#333e47" stroke-width="2"/>
+    <text class="section" x="28" y="35">CORE PRINCIPLE</text>
+    <text class="text" x="205" y="36">Agents can recommend action, but execution policy has final authority before any broker submission.</text>
+  </g>
+</svg>
